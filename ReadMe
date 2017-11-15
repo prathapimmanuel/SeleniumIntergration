@@ -1,0 +1,49 @@
+**** Tntegration of test management tool with selenium****
+Tools chosen-test link(Free ware), HP ALM
+Examples were given on how to integrate with tete management tool with selenium
+
+
+1. TestLink
+System requirement
+Test Link interface  - Project, test plans, test cases should be defined
+Selenium jars
+Testng jars
+
+Steps:
+Modify Envparamertes and set test.management.tool to Testlink
+Example Test-GoogleTest
+
+After the test run it will read the properties from 'Testlink.properties' and from the ITestResult of testNg class
+to update the result in testlink
+
+How To run::
+
+command line execution 
+Go to pom.xml - Replace the '${suiteXmlFile}' to TestlinkTests.xml 
+cmd : mvn clean install
+
+2. HPALM
+
+System requirement
+ALM Service Wrapper jars
+Selenium jars
+Testng jars
+poi jars
+jacob-1.18 dll
+
+
+Steps:
+Modify Envparameters and set test.management.tool to HPALM
+Example Test - JDELoginTest and NavigateToSaleTest
+Update DLL_PATH to the path in your local where u have placed the jacob dll file.
+Update TEST_EXCEL to the path where the testcase mapping sheet is rpesent in your local
+
+External Data sheet will contain Step description to update in QC.The execution status od each test is obtained based on the assertions permed in eacn test run.
+The test will execute and update QC after reading the test steps from an external excel mapping sheet with the corresponding testcase.
+
+command line execution 
+Go to pom.xml - Replace the '${suiteXmlFile}' to testng.xml 
+cmd : mvn clean install
+
+
+
