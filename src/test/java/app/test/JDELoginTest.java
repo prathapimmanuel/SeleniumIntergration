@@ -15,24 +15,17 @@ import app.page.LoginPage;
 import atu.alm.wrapper.enums.StatusAs;
 import framework.core.FunctionalLibrary;
 import framework.core.TestMgmtToolUtil;
+import framework.core.TestNGBase;
 
-public class JDELoginTest {
-	WebDriver driver;
+public class JDELoginTest extends TestNGBase {
 	Properties prop = new Properties(); 
  
-	@BeforeTest 
-	public void Startup() {
-		System.out.println("inside startup");
-		System.setProperty("webdriver.chrome.driver", 
-				"D:\\Data Backup\\Selenium\\chromedriver.exe");
-		driver = new ChromeDriver(); 
-	}
 
 	@Test(description = "JDE Invalid Login Validation",priority = 1)
 	public void JDEInvalidLoginValidation() throws Exception {	
 		driver.manage().window().maximize(); 
 		prop.load(new FileInputStream("Data.properties"));
-		driver.get(prop.getProperty("URL"));
+		driver.get(prop.getProperty("URL")); 
 		Thread.sleep(2000);
         TestMgmtToolUtil testTool =  new TestMgmtToolUtil();
 		LoginPage loginPage = new LoginPage(driver);
@@ -45,7 +38,7 @@ public class JDELoginTest {
 			Assert.fail("Login Failed");  
 			//testTool.createDefect();  
 		}   
-	} 
+	}  
 		
 	@Test(description = "JDE Valid Login Validation",priority = 2)
 	public void JDELoginValidation() throws Exception { 
@@ -64,9 +57,5 @@ public class JDELoginTest {
 			testTool.updateExecResutinTestMgmtToolWithParams(StatusAs.PASSED,"TestSet1");   
 		}  
 	}   
-	
-	@AfterClass 
-	public void teardown() {
-		driver.quit();
-	}
+
 }

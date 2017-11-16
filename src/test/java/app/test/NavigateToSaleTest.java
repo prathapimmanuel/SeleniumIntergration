@@ -42,23 +42,15 @@ import framework.core.ReadFromExcel;
 import framework.core.TestMgmtToolUtil;
 import framework.core.TestNGBase;
 
-public class NavigateToSaleTest {
-	WebDriver driver;
+public class NavigateToSaleTest extends TestNGBase{
+
 	Properties prop = new Properties(); 
 
-	@BeforeTest 
-	public void Startup() {
-		System.out.println("inside startup");
-		System.setProperty("webdriver.chrome.driver", 	
-				"D:\\Data Backup\\Selenium\\chromedriver.exe"); 
-		driver = new ChromeDriver(); 
-	}  
- 
 	@Test(description = "JDE Navigate to Sale Screen",priority = 1)
 	public void JDEInvalidLoginValidation() throws Exception {
 		prop.load(new FileInputStream("Data.properties"));
 		driver.manage().window().maximize();
-		Thread.sleep(2000); 
+		Thread.sleep(2000);   
 		driver.get(prop.getProperty("URL"));
 		Thread.sleep(2000); 
 		FunctionalLibrary libLoad = new FunctionalLibrary();
@@ -68,15 +60,11 @@ public class NavigateToSaleTest {
 			loginPage.navigateToSale();
 			boolean saleLoad = loginPage.checkSaleLoad();
 			libLoad.captureScreenShot("TC12",  
-					driver);   
+					driver);     
 			if(saleLoad) 
 			{ 			
 			testTool.updateExecResutinTestMgmtToolWithParams(StatusAs.PASSED,"TestSet2");
 		}      
 	} 
 
-	@AfterClass 
-	public void teardown() {
-		driver.quit();
-	}
 }
