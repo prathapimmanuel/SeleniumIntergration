@@ -23,7 +23,6 @@ public class JDELoginTest extends TestNGBase {
 
 	@Test(description = "JDE Invalid Login Validation",priority = 1)
 	public void JDEInvalidLoginValidation() throws Exception {	
-		driver.manage().window().maximize(); 
 		prop.load(new FileInputStream("Data.properties"));
 		driver.get(prop.getProperty("URL")); 
 		Thread.sleep(2000);
@@ -42,12 +41,10 @@ public class JDELoginTest extends TestNGBase {
 		
 	@Test(description = "JDE Valid Login Validation",priority = 2)
 	public void JDELoginValidation() throws Exception { 
-		driver.manage().window().maximize();
 		prop.load(new FileInputStream("Data.properties"));
 		driver.get(prop.getProperty("URL"));
 		Thread.sleep(2000);
-        TestMgmtToolUtil testTool =  new TestMgmtToolUtil(); 
-      
+        TestMgmtToolUtil testTool =  new TestMgmtToolUtil();
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.checkLogin(prop.getProperty("validUser"),prop.getProperty("validPwd"));
 		boolean status = loginPage.checkHomePageLoad();

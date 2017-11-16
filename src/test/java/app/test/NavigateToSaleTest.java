@@ -49,7 +49,6 @@ public class NavigateToSaleTest extends TestNGBase{
 	@Test(description = "JDE Navigate to Sale Screen",priority = 1)
 	public void JDEInvalidLoginValidation() throws Exception {
 		prop.load(new FileInputStream("Data.properties"));
-		driver.manage().window().maximize();
 		Thread.sleep(2000);   
 		driver.get(prop.getProperty("URL"));
 		Thread.sleep(2000); 
