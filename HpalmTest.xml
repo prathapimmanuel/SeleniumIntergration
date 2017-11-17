@@ -4,8 +4,6 @@
   <test name="Test">
     <classes>
       <class name="app.test.GoogleTest"/>
-      <class name="app.test.JDELoginTest"/>
-       <class name="app.test.NavigateToSaleTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
