@@ -1,9 +1,9 @@
-package Test;
-
+package app.test; 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import app.page.GooglePage;
 import framework.core.EnvParameters;
 import framework.core.EnvParameters.OSType;
 
@@ -16,8 +16,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.support.FindBy;
-
-import Pages.GooglePage;
 
 
 /**
