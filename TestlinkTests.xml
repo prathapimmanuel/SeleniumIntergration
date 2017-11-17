@@ -3,9 +3,7 @@
 <suite name="Suite">
   <test name="Test">
     <classes>
-      <class name="app.test.GoogleTest"/>
-      <class name="app.test.JDELoginTest"/>
-       <class name="app.test.NavigateToSaleTest"/>
+      <class name="app.test.GoogleTest"/> 
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

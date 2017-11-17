@@ -101,7 +101,7 @@
                                          <!-- Need to pass testng.xml files as argument from command line -->
                                          <suiteXmlFile>TestlinkTests.xml</suiteXmlFile>
                                   </suiteXmlFiles>
-                                  <properties>
+                                  <properties> 
                                          <usedefaultlisteners>true</usedefaultlisteners>
                                   </properties>
                                   <systemProperties>
