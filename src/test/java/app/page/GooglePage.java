@@ -10,6 +10,7 @@ public class GooglePage {
 	
 	@FindBy(xpath ="//input[@name= 'q']")
 	private  WebElement txtSearchBox ;
+	
 	@FindBy(xpath ="//div[@id ='resultStats']")
 	private  WebElement txtResultCount;
 	private WebDriver driver;
@@ -34,7 +35,7 @@ public class GooglePage {
 			Thread.sleep(6000);
 		} catch (InterruptedException e) {		
 			e.printStackTrace();
-		}
+		} 
 		txtSearchBox.sendKeys(searchText);
 		txtSearchBox.sendKeys(Keys.ENTER);
 	}

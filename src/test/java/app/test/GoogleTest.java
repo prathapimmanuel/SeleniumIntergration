@@ -20,7 +20,7 @@ public class GoogleTest extends TestNGBase {
 
 	Boolean flag = false;
 
-	@Test
+	//@Test
 	public void testOpenGoogle() {
 		
 		GooglePage objGooglePage = new GooglePage(driver);
@@ -29,7 +29,7 @@ public class GoogleTest extends TestNGBase {
 		flag = objGooglePage.getTitle().contains("Google");
 		softAssert.assertTrue(flag, "search page opened");
 		softAssert.assertAll();		
-		objTestMgmtToolUtil.updateExecResutinTestMgmtTool(null,null);
+		//objTestMgmtToolUtil.updateExecResutinTestMgmtTool(null,null);
 
 	}
 
@@ -44,7 +44,7 @@ public class GoogleTest extends TestNGBase {
 		flag = objGooglePage.getTitle().contains("Auto mation");
 		Assert.assertTrue(flag, "search succeeds");
 		softAssert.assertAll();
-		objTestMgmtToolUtil.updateExecResutinTestMgmtTool(null,null);
+		//objTestMgmtToolUtil.updateExecResutinTestMgmtTool(null,null);
 	}
 	
 	@Test
@@ -58,7 +58,7 @@ public class GoogleTest extends TestNGBase {
 		flag = !objGooglePage.getResultsCount().isEmpty();
 		Assert.assertTrue(flag, "search results available");
 		softAssert.assertAll();
-		objTestMgmtToolUtil.updateExecResutinTestMgmtTool(null,null);
+		//objTestMgmtToolUtil.updateExecResutinTestMgmtTool(null,null);
 		
 	}
 }

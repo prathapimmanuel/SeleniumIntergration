@@ -3,15 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="app.test.NavigateToSaleTest">
+      <class name="app.test.GoogleTest">
         <methods>
-          <include name="JDEInvalidLoginValidation"/>
           <include name="testSetup"/>
-          <include name="Startup"/>
-          <include name="teardown"/>
+          <include name="testSearchGoogle"/>
+          <include name="testValidatesearch"/>
           <include name="postTestCase"/>
         </methods>
-      </class> <!-- app.test.NavigateToSaleTest -->
+      </class> <!-- app.test.GoogleTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
